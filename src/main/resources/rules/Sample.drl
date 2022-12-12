@@ -1,81 +1,128 @@
 package com.sample;
  
 import com.sample.DroolsTest.*;
+import org.kie.api.runtime.KieRuntime
+import java.util.ArrayList
+import java.util.List
+import java.util.Arrays;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
-rule "WstawPomiar"
+global JFrame frame
+global javax.swing.JTextArea textArea
+
+declare Pytanie
+	trescPytania : String
+	odpowiedz : String
+end
+
+rule "Which type of book are you looking for?"
 	when
 	then
-		Pomiar p = new Pomiar();
-		p.dym = true;
-        p.temperatura = 10;
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Fantasy");
+		odp.add("Sci-Fi"); 
+		odp.add("A little bit of both");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Which type of book are you looking for?", odp );
 		insert(p);
 end
 
-// Regu³y odpalaj¹ siê po kolei :-)
-rule "2"
+rule "Up for a fairy tale?"
 	when
+		Pytanie(trescPytania == "Which type of book are you looking for?", odpowiedz == "Fantasy")
 	then
-		System.out.println("2");
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Yes, why mess with a classic formula");
+		odp.add("No, something more gritty");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Up for a fairy tale?", odp );
+		insert(p);
 end
 
-rule "1"
+rule "FirstFork"
 	when
+		Pytanie(trescPytania == "Up for a fairy tale?", odpowiedz == "Yes, why mess with a classic formula")
 	then
-		System.out.println("1");
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("A gritty existential fable");
+		odp.add("Reverse Rumpelstiltskin");
+		odp.add("Goblin Politics");
+		odp.add("A short story");
+		Pytanie p = zapytaj(frame, kcontext.getKieRuntime(), "Wybierz:", odp );
+		insert(p);
 end
 
-
-
-rule "WstawPozar"
+rule "SecondFork"
 	when
-		exists Pomiar( dym == true || temperatura > 150 )
+		Pytanie(odpowiedz == "A short story")
 	then
-		insert(new Pozar());
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Based in Asian folklore");
+		odp.add("Provocative yet surreal");
+		Pytanie p = zapytaj(frame, kcontext.getKieRuntime(), "Wybierz:", odp );
+		insert(p);
 end
-
-rule "OstrzegajOPozarze"
+	
+rule "Recommend: The Paper Menagere And Other Stories"
 	when
-		exists Pozar()
+		Pytanie(odpowiedz == "Based in Asian folklore")
 	then
-		System.out.println("Pali siê");
-end
-
-rule "UtworzTelefon"
-	when
-		exists Pozar()
-	then
-		insert(new Telefon(112));
-end	
-
-rule "PowiedzONumerzeJesliSiePali"
-	when
-		$telefon : Telefon()
-	then
-		System.out.println("Proszê zadzwoniæ na numer " + $telefon.numer + ".");
-end
-
-rule "CzyStrazPrzyjechala"
-	when
-		exists Straz()
-	then
-		System.out.println("Stra¿ przyjecha³a!");
-end
-
-rule "StrazGasiPozar"
-	when
-		exists Straz()
-		$pozar : Pozar()
-	then
-		System.out.println("XD");
-		retract($pozar);
-end
-
-rule "StrazOdjezdza"
-	when
-		not Pozar()
-		$straz : Straz()
-	then
-		retract($straz);
+		recommend( frame, kcontext.getKieRuntime(),"The Paper Menagere And Other Stories" );
 end
 
 
+function void recommend(JFrame frame, KieRuntime krt, String title) {
+	final JPanel panel = new JPanel();
+	panel.add( new JLabel(title) );
+	JOptionPane.showMessageDialog(frame, panel);	
+}	
+
+	
+function Pytanie zapytaj(JFrame frame, KieRuntime krt, String question, ArrayList answers) {
+
+    class Listener implements ItemListener {
+        public Pytanie answers;
+        public String chosen;
+        public Listener(Pytanie answer, String chosen) {
+            this.answers = answer;
+            this.chosen = chosen;
+        }
+
+        @Override
+        public void itemStateChanged(ItemEvent event) {
+            if (event.getStateChange() == ItemEvent.SELECTED) {
+                answers.setOdpowiedz(chosen);
+            }
+        }
+    }
+    Pytanie response = new Pytanie(question, answers.get(0).toString());
+
+    final JPanel panel = new JPanel(new GridLayout(0, 1));
+    panel.add(new JLabel(question));
+
+    ArrayList<JRadioButton> buttons = new ArrayList<>();
+
+    for (int i = 0; i < answers.size(); i++) {
+        String text = answers.get(i).toString();
+        JRadioButton radioButton = new JRadioButton(text);
+        Listener newListener = new Listener(response, text);
+        radioButton.addItemListener(newListener);
+        buttons.add(radioButton);
+    }
+
+    buttons.get(0).setSelected(true);
+    response.setOdpowiedz(answers.get(0).toString());
+
+    ButtonGroup group = new ButtonGroup();
+
+    for (int i = 0; i < buttons.size(); i++) {
+        group.add(buttons.get(i));
+        panel.add(buttons.get(i));
+    }
+
+    if (JOptionPane.showConfirmDialog(frame, panel, "Question", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE) < 0) {
+        response.setOdpowiedz("Exit program");
+    }
+
+    return response;
+}

@@ -4,243 +4,128 @@
   <events>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>WstawPomiar [0]</activationId>
-      <rule>WstawPomiar</rule>
+      <activationId>Which type of book are you looking for? [0]</activationId>
+      <rule>Which type of book are you looking for?</rule>
       <declarations></declarations>
       <factHandleIds>0</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>WstawPomiar [0]</activationId>
-      <rule>WstawPomiar</rule>
+      <activationId>Which type of book are you looking for? [0]</activationId>
+      <rule>Which type of book are you looking for?</rule>
       <declarations></declarations>
       <factHandleIds>0</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>1</factId>
-      <objectToString>com.sample.DroolsTest$Pomiar@5a021cb9</objectToString>
+      <objectToString>Pytanie( trescPytania=Which type of book are you looking for?, odpowiedz=Fantasy )</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>WstawPomiar [0]</activationId>
-      <rule>WstawPomiar</rule>
+      <activationId>Which type of book are you looking for? [0]</activationId>
+      <rule>Which type of book are you looking for?</rule>
       <declarations></declarations>
       <factHandleIds>0</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>2 [0]</activationId>
-      <rule>2</rule>
+      <activationId>Up for a fairy tale? [1]</activationId>
+      <rule>Up for a fairy tale?</rule>
       <declarations></declarations>
-      <factHandleIds>0</factHandleIds>
+      <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>2 [0]</activationId>
-      <rule>2</rule>
+      <activationId>Up for a fairy tale? [1]</activationId>
+      <rule>Up for a fairy tale?</rule>
       <declarations></declarations>
-      <factHandleIds>0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>7</type>
-      <activationId>2 [0]</activationId>
-      <rule>2</rule>
-      <declarations></declarations>
-      <factHandleIds>0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>4</type>
-      <activationId>1 [0]</activationId>
-      <rule>1</rule>
-      <declarations></declarations>
-      <factHandleIds>0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>6</type>
-      <activationId>1 [0]</activationId>
-      <rule>1</rule>
-      <declarations></declarations>
-      <factHandleIds>0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>7</type>
-      <activationId>1 [0]</activationId>
-      <rule>1</rule>
-      <declarations></declarations>
-      <factHandleIds>0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>4</type>
-      <activationId>WstawPozar [0]</activationId>
-      <rule>WstawPozar</rule>
-      <declarations></declarations>
-      <factHandleIds>1,0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>6</type>
-      <activationId>WstawPozar [0]</activationId>
-      <rule>WstawPozar</rule>
-      <declarations></declarations>
-      <factHandleIds>1,0</factHandleIds>
+      <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>2</factId>
-      <objectToString>com.sample.DroolsTest$Pozar@2555fff0</objectToString>
+      <objectToString>Pytanie( trescPytania=Up for a fairy tale?, odpowiedz=Yes, why mess with a classic formula )</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>WstawPozar [0]</activationId>
-      <rule>WstawPozar</rule>
+      <activationId>Up for a fairy tale? [1]</activationId>
+      <rule>Up for a fairy tale?</rule>
       <declarations></declarations>
-      <factHandleIds>1,0</factHandleIds>
+      <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>OstrzegajOPozarze [0]</activationId>
-      <rule>OstrzegajOPozarze</rule>
+      <activationId>FirstFork [2]</activationId>
+      <rule>FirstFork</rule>
       <declarations></declarations>
-      <factHandleIds>2,0</factHandleIds>
+      <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>OstrzegajOPozarze [0]</activationId>
-      <rule>OstrzegajOPozarze</rule>
+      <activationId>FirstFork [2]</activationId>
+      <rule>FirstFork</rule>
       <declarations></declarations>
-      <factHandleIds>2,0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>7</type>
-      <activationId>OstrzegajOPozarze [0]</activationId>
-      <rule>OstrzegajOPozarze</rule>
-      <declarations></declarations>
-      <factHandleIds>2,0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>4</type>
-      <activationId>UtworzTelefon [0]</activationId>
-      <rule>UtworzTelefon</rule>
-      <declarations></declarations>
-      <factHandleIds>2,0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>6</type>
-      <activationId>UtworzTelefon [0]</activationId>
-      <rule>UtworzTelefon</rule>
-      <declarations></declarations>
-      <factHandleIds>2,0</factHandleIds>
+      <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>3</factId>
-      <objectToString>com.sample.DroolsTest$Telefon@7a0e1b5e</objectToString>
+      <objectToString>Pytanie( trescPytania=Wybierz:, odpowiedz=A short story )</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>UtworzTelefon [0]</activationId>
-      <rule>UtworzTelefon</rule>
+      <activationId>FirstFork [2]</activationId>
+      <rule>FirstFork</rule>
       <declarations></declarations>
-      <factHandleIds>2,0</factHandleIds>
+      <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>PowiedzONumerzeJesliSiePali [3]</activationId>
-      <rule>PowiedzONumerzeJesliSiePali</rule>
-      <declarations>$telefon=com.sample.DroolsTest$Telefon@7a0e1b5e</declarations>
+      <activationId>SecondFork [3]</activationId>
+      <rule>SecondFork</rule>
+      <declarations></declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>PowiedzONumerzeJesliSiePali [3]</activationId>
-      <rule>PowiedzONumerzeJesliSiePali</rule>
-      <declarations>$telefon=com.sample.DroolsTest$Telefon@7a0e1b5e</declarations>
-      <factHandleIds>3</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>7</type>
-      <activationId>PowiedzONumerzeJesliSiePali [3]</activationId>
-      <rule>PowiedzONumerzeJesliSiePali</rule>
-      <declarations>$telefon=com.sample.DroolsTest$Telefon@7a0e1b5e</declarations>
+      <activationId>SecondFork [3]</activationId>
+      <rule>SecondFork</rule>
+      <declarations></declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>4</factId>
-      <objectToString>com.sample.DroolsTest$Straz@7646731d</objectToString>
-    </org.drools.core.audit.event.ObjectLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>4</type>
-      <activationId>CzyStrazPrzyjechala [0]</activationId>
-      <rule>CzyStrazPrzyjechala</rule>
-      <declarations></declarations>
-      <factHandleIds>4,0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>6</type>
-      <activationId>CzyStrazPrzyjechala [0]</activationId>
-      <rule>CzyStrazPrzyjechala</rule>
-      <declarations></declarations>
-      <factHandleIds>4,0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>7</type>
-      <activationId>CzyStrazPrzyjechala [0]</activationId>
-      <rule>CzyStrazPrzyjechala</rule>
-      <declarations></declarations>
-      <factHandleIds>4,0</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>4</type>
-      <activationId>StrazGasiPozar [0, 2]</activationId>
-      <rule>StrazGasiPozar</rule>
-      <declarations>$pozar=com.sample.DroolsTest$Pozar@2555fff0</declarations>
-      <factHandleIds>4,0,2</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ActivationLogEvent>
-      <type>6</type>
-      <activationId>StrazGasiPozar [0, 2]</activationId>
-      <rule>StrazGasiPozar</rule>
-      <declarations>$pozar=com.sample.DroolsTest$Pozar@2555fff0</declarations>
-      <factHandleIds>4,0,2</factHandleIds>
-    </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ObjectLogEvent>
-      <type>3</type>
-      <factId>2</factId>
-      <objectToString>com.sample.DroolsTest$Pozar@2555fff0</objectToString>
+      <objectToString>Pytanie( trescPytania=Wybierz:, odpowiedz=Based in Asian folklore )</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>StrazGasiPozar [0, 2]</activationId>
-      <rule>StrazGasiPozar</rule>
+      <activationId>SecondFork [3]</activationId>
+      <rule>SecondFork</rule>
       <declarations></declarations>
-      <factHandleIds>4,0,2</factHandleIds>
+      <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>StrazOdjezdza [0, 4]</activationId>
-      <rule>StrazOdjezdza</rule>
-      <declarations>$straz=com.sample.DroolsTest$Straz@7646731d</declarations>
-      <factHandleIds>4,0</factHandleIds>
+      <activationId>Recommend: The Paper Menagere And Other Stories [4]</activationId>
+      <rule>Recommend: The Paper Menagere And Other Stories</rule>
+      <declarations></declarations>
+      <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>StrazOdjezdza [0, 4]</activationId>
-      <rule>StrazOdjezdza</rule>
-      <declarations>$straz=com.sample.DroolsTest$Straz@7646731d</declarations>
-      <factHandleIds>4,0</factHandleIds>
+      <activationId>Recommend: The Paper Menagere And Other Stories [4]</activationId>
+      <rule>Recommend: The Paper Menagere And Other Stories</rule>
+      <declarations></declarations>
+      <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
-    <org.drools.core.audit.event.ObjectLogEvent>
-      <type>3</type>
-      <factId>4</factId>
-      <objectToString>com.sample.DroolsTest$Straz@7646731d</objectToString>
-    </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>StrazOdjezdza [0, 4]</activationId>
-      <rule>StrazOdjezdza</rule>
+      <activationId>Recommend: The Paper Menagere And Other Stories [4]</activationId>
+      <rule>Recommend: The Paper Menagere And Other Stories</rule>
       <declarations></declarations>
-      <factHandleIds>4,0</factHandleIds>
+      <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
   </events>
 </org.drools.core.audit.WorkingMemoryLog>

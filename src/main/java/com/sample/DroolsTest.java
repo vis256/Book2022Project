@@ -20,10 +20,6 @@ public class DroolsTest {
 
             // go !
             kSession.fireAllRules();
-            
-            Straz s = new Straz();
-            kSession.insert(s);
-            kSession.fireAllRules();
                        
             kLogger.close();
         } catch (Throwable t) {
@@ -31,22 +27,6 @@ public class DroolsTest {
         }
     }
 
-    public static class Pomiar {
-    	public static boolean dym;
-    	public static float temperatura;
-    }
-    
-    public static class Pozar { };
-    
-    public static class Telefon {
-    	public static int numer;
-    	
-    	public Telefon(int x) {
-    		numer = x;
-    	}
-    }
-    
-    public static class Straz { };
     
 
 }
