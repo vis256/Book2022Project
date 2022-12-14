@@ -316,7 +316,7 @@ rule "Recommend: Piranesi"
 		recommend( frame, kcontext.getKieRuntime(),"Piranesi by Susanna Clarke" );
 end
 
-rule "The People running show : Travel somewhere"
+rule "The People running show : Travel somewhere2"
 	when
 		Pytanie(trescPytania == "With magical borders?", odpowiedz == "Yes, bring on a new world")
 	then
