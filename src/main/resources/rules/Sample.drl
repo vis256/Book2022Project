@@ -95,7 +95,7 @@ rule "Recommend: The buried Giant"
 	when
 		Pytanie(odpowiedz == "A gritty, existential fable")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"The buried Giant by Kazuo Ishiguro" );
+		recommend( frame, kcontext.getKieRuntime(),"The Buried Giant by Kazuo Ishiguro" );
 end
 
 rule "Fairy Tale Fork : No"
