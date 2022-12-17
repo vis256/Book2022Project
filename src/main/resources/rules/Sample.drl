@@ -472,6 +472,318 @@ rule "Recommend: In the future : American War"
 		recommend( frame, kcontext.getKieRuntime(), "American War by Omar El Akkad");
 end
 
+rule "Sci-Fi fork"
+	when
+		Pytanie(trescPytania == "Which type of book are you looking for?", odpowiedz == "Sci-Fi")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("No. Let's stay on Earth");
+		odp.add("Yes. Other planets it is.");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Want to travel to other planets?", odp );
+		insert(p);
+end
+
+rule "Sci-Fi: On Earth"
+	when
+		Pytanie(trescPytania == "Want to travel to other planets?", odpowiedz == "No. Let's stay on Earth")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Bring on the future");
+		odp.add("Focus on today");
+		odp.add("Why not both?");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Today, or an ultra-modern future?", odp );
+		insert(p);
+end
+
+rule "Recommend: In the future : Exhalation"
+	when
+		Pytanie(odpowiedz == "Why not both?")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"Exhalation by Ted Chiang" );
+end
+
+rule "Sci-Fi: Focus on today"
+	when
+		Pytanie(trescPytania == "Today, or an ultra-modern future?", odpowiedz == "Focus on today")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("The ethics of cloning");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Focus on today", odp );
+		insert(p);
+end
+
+rule "Recommend: Focus on today : The Echo Wife"
+	when
+		Pytanie(odpowiedz == "The ethics of cloning")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"The Echo Wife by Sarah Gailey" );
+end
+
+rule "Sci-Fi: Bring on the future"
+	when
+		Pytanie(trescPytania == "Today, or an ultra-modern future?", odpowiedz == "Bring on the future")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Where humans escape");
+		odp.add("Where humanity is struggling");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Bring on the future", odp );
+		insert(p);
+end
+
+rule "Sci-Fi: Bring on the future : where humanity is struggling"
+	when
+		Pytanie(trescPytania == "Bring on the future", odpowiedz == "Where humanity is struggling")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("And we're ready to rebuild");
+		odp.add("And we've become refugees");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Where humanity is struggling", odp );
+		insert(p);
+end
+
+rule "Recommend: Annihilation"
+	when
+		Pytanie(odpowiedz == "And we're ready to rebuild")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"Annihilation (Southern Reach, #1) by Jeff VanderMeer" );
+end
+
+rule "Recommend: Rosewater"
+	when
+		Pytanie(odpowiedz == "And we've become refugees")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"Rosewater (The Wormwood Trilogy, #1) by Tade Thompson" );
+end
+
+rule "Sci-Fi: Bring on the future : Where humans escape"
+	when
+		Pytanie(trescPytania == "Bring on the future", odpowiedz == "Where humans escape")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Through the multiverse");
+		odp.add("To where time travel is weaponized");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Where humans escape", odp );
+		insert(p);
+end
+
+rule "Recommend: The Space Between Worlds"
+	when
+		Pytanie(odpowiedz == "Through the multiverse")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"The Space Between Worlds by Michael Johnson" );
+end
+
+rule "Recommend: This is How You Lose the Time"
+	when
+		Pytanie(odpowiedz == "To where time travel is weaponized")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"This Is How You Lose the Time War by Amal El-Mohtar and max Gladstone" );
+end
+
+rule "Sci-Fi: Other planets"
+	when
+		Pytanie(trescPytania == "Want to travel to other planets?", odpowiedz == "Yes. Other planets it is.")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Let's start closer to home");
+		odp.add("Let's go to another galaxy");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Yes. Other planets it is.", odp );
+		insert(p);
+end
+
+rule "Sci-Fi: Closer to home"
+	when
+		Pytanie(trescPytania == "Yes. Other planets it is.", odpowiedz == "Let's start closer to home")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Let the action come to us");
+		odp.add("And see where adventure leads");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Let's start closer to home", odp );
+		insert(p);
+end
+
+rule "Sci-Fi: action come to us"
+	when
+		Pytanie(trescPytania == "Let's start closer to home", odpowiedz == "Let the action come to us")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("A brewing war with alien tech");
+		odp.add("A documentary about a colony's last survivor");
+		odp.add("First contact through a VR game");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Which do you prefer?", odp );
+		insert(p);
+end
+
+rule "Recommend: Leviathan wakes"
+	when
+		Pytanie(odpowiedz == "A brewing war with alien tech")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"Leviathan Wakes (The Expanse, #1) by James S.A. Corey" );
+end
+
+rule "Recommend: Radiance"
+	when
+		Pytanie(odpowiedz == "A documentary about a colony's last survivor")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"Radiance by M. Valente" );
+end
+
+rule "Recommend: The Three-Body Problem"
+	when
+		Pytanie(odpowiedz == "First contact through a VR game")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"The Three-Body Problem (Remembrance of Earth's Past, #1) by Cixin Liu" );
+end
+
+rule "Sci-Fi: And see where adventure leads"
+	when
+		Pytanie(trescPytania == "Let's start closer to home", odpowiedz == "And see where adventure leads")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("To science some $h1t");
+		odp.add("To find a new home");
+		odp.add("To explore strange new worlds seek out new life, and new civilizations");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"And see where adventure leads", odp );
+		insert(p);
+end
+
+rule "Recommend: The Martian"
+	when
+		Pytanie(odpowiedz == "To science some $h1t")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"The Martian by Andy Weir" );
+end
+
+
+rule "Recommend: The Long Way"
+	when
+		Pytanie(odpowiedz == "To explore strange new worlds seek out new life, and new civilizations")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"The Long Way To A Small Angry Planet (Wayfarers, #1) by Becky Chambers" );
+end
+
+rule "Sci-Fi: To find a new home"
+	when
+		Pytanie(trescPytania == "And see where adventure leads", odpowiedz == "To find a new home")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Using a changing extradimensional field");
+		odp.add("On a generational ship with a racial divide");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"To find a new home", odp );
+		insert(p);
+end
+
+rule "Recommend: The Collapsing Empire"
+	when
+		Pytanie(odpowiedz == "Using a changing extradimensional field")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"The Collapsing Empire (The Interdependency, #1) by John Scalzi" );
+end
+
+rule "Recommend: An Unkindness of Ghosts"
+	when
+		Pytanie(odpowiedz == "On a generational ship with a racial divide")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"An Unkindness of Ghosts by Rivers Solomon" );
+end
+
+rule "Sci-Fi: go to another galaxy "
+	when
+		Pytanie(trescPytania == "Yes. Other planets it is.", odpowiedz == "Let's go to another galaxy")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("To explore");
+		odp.add("To settle down");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Let's go to another galaxy", odp );
+		insert(p);
+end
+
+rule "Sci-Fi: To explore"
+	when
+		Pytanie(trescPytania == "Let's go to another galaxy", odpowiedz == "To explore")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("With Ancient AIs");
+		odp.add("The nature of reality");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"To explore", odp );
+		insert(p);
+end
+
+rule "Recommend: Ninefox Gambit"
+	when
+		Pytanie(odpowiedz == "The nature of reality")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"Ninefox Gambit (The Machineries of Empire, #1) by Yoon Ha Lee" );
+end
+
+rule "Sci-Fi: With Ancient AIs"
+	when
+		Pytanie(trescPytania == "To explore", odpowiedz == "With Ancient AIs")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Addicted to TV shows");
+		odp.add("With a hive mind");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"With Ancient AIs", odp );
+		insert(p);
+end
+
+rule "Recommend: All systems Red"
+	when
+		Pytanie(odpowiedz == "Addicted to TV shows")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"All systems Red (The Murderbot Diaries, #1) by Martha Wells" );
+end
+
+rule "Recommend: Ancillary Justice"
+	when
+		Pytanie(odpowiedz == "With a hive mind")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"Ancillary Justice (Imperial Radch, #1) by Ann Leckie" );
+end
+
+rule "Sci-Fi: To settle down"
+	when
+		Pytanie(trescPytania == "Let's go to another galaxy", odpowiedz == "To settle down")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("At the finest off-world university");
+		odp.add("On another planet ruled by...");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"To settle down", odp );
+		insert(p);
+end
+
+rule "Recommend: Binti"
+	when
+		Pytanie(odpowiedz == "At the finest off-world university")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"Binti (Binti, #1) by Nnedi Okorator" );
+end
+
+rule "Sci-Fi: On another planet ruled by"
+	when
+		Pytanie(trescPytania == "To settle down", odpowiedz == "On another planet ruled by...")
+	then
+		ArrayList<String> odp = new ArrayList<String>();
+		odp.add("Empires inspired by the past");
+		odp.add("Intelligent spiders uplifted by science");
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"On another planet ruled by...", odp );
+		insert(p);
+end
+
+rule "Recommend: A Memory Called Empire"
+	when
+		Pytanie(odpowiedz == "Empires inspired by the past")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"A Memory Called Empire (Teixcalaan, #1) by Arkady Martine" );
+end
+
+rule "Recommend: Children of Time"
+	when
+		Pytanie(odpowiedz == "Intelligent spiders uplifted by science")
+	then
+		recommend( frame, kcontext.getKieRuntime(),"Children of Time (Children of Time, #1) by Adrian Tchaikovsky" );
+end
+
 function void recommend(JFrame frame, KieRuntime krt, String title) {
 	final JPanel panel = new JPanel();
 	panel.add( new JLabel(title) );
