@@ -67,14 +67,14 @@ rule "Recommend: The Paper Menagere And Other Stories"
 	when
 		Pytanie(odpowiedz == "Based in Asian folklore")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"The Paper Menagere And Other Stories by Ken Liu" );
+		recommend( frame, kcontext.getKieRuntime(),"The Paper Menagerie And Other Stories by Ken Liu" );
 end
 
 rule "Recommend: Her body and other parties"
 	when
 		Pytanie(odpowiedz == "Provocative yet surreal")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"Her body and other parties by Carmen Maria Machado" );
+		recommend( frame, kcontext.getKieRuntime(), "Her Body and Other Parties: Stories by Carmen Maria Machado" );
 end
 
 rule "Recommend: The Goblin Emperor"
@@ -142,7 +142,7 @@ rule "Recommend: The Fifth Season"
 	when
 		Pytanie(odpowiedz == "Geological & caste upheaval")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"The Fifth Season (the Broken Earth, #1) by N.K. Jemisin" );
+		recommend( frame, kcontext.getKieRuntime(),"The Fifth Season (The Broken Earth, #1) by N.K. Jemisin" );
 end
 
 rule "New World Fork : Magical Revolution"
@@ -173,7 +173,7 @@ rule "Recommend: A Little Hatred"
 	when
 		Pytanie(odpowiedz == "Magic giving way to machines")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"A Little Hatred (The Age of Madness, #1) by Joe Abecrombie" );
+		recommend( frame, kcontext.getKieRuntime(),"A Little Hatred (The Age of Madness, #1) by Joe Abercrombie" );
 end
 
 rule "Fairy Tale Fork : No New World Fork"
@@ -262,7 +262,7 @@ rule "Recommend: Every Heart a Doorway"
 	when
 		Pytanie(odpowiedz == "Kids with PTSD from Narnia")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"Every Heart a Doorway (Wayward Choldren, #1) by Seanan McGuire" );
+		recommend( frame, kcontext.getKieRuntime(),"Every Heart A Doorway (Wayward Choldren, #1) by Seanan McGuire" );
 end
 
 rule "The People running show : Travel somewhere"
@@ -332,7 +332,7 @@ rule "Recommend: A Dark Shade of Magic"
 	when
 		Pytanie(odpowiedz == "To other Earths")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"A Dark Shade of Magic (Shades of Magic, #1) by V.E. Schwab" );
+		recommend( frame, kcontext.getKieRuntime(),"A Darker Shade of Magic (Shades of Magic, #1) by V.E. Schwab" );
 end
 
 rule "Recommend: Sorcerer to the Crown"
@@ -373,16 +373,16 @@ end
 
 rule "Recommend: Mexican Gothic"
 	when
-		Pytanie(odpowiedz == "Mexican Gothic by Sylvia Morendo-Garcia")
+		Pytanie(odpowiedz == "Dark and ominous")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"Dark and ominous" );
+		recommend( frame, kcontext.getKieRuntime(), "Mexican Gothic by Sylvia Morendo-Garcia" );
 end
 
 rule "Recommend: Gideon The Ninth"
 	when
-		Pytanie(odpowiedz == "Gideon The Ninth (The Locked Tomb, #1) by Tamsyn Muir")
+		Pytanie(odpowiedz == "Religious horror in space")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"Religious horror in space" );
+		recommend( frame, kcontext.getKieRuntime(), "Gideon The Ninth (The Locked Tomb, #1) by Tamsyn Muir");
 end
 
 rule "Alternative history fork"
@@ -399,9 +399,9 @@ end
 
 rule "Recommend: In the past"
 	when
-		Pytanie(odpowiedz == "The Calculating Stars (Lady Astronaut Universe, #1) by Mary Robinette Kowal")
+		Pytanie(odpowiedz == "In the past")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"With space travel" );
+		recommend( frame, kcontext.getKieRuntime(), "The Calculating Stars (Lady Astronaut Universe, #1) by Mary Robinette Kowal" );
 end
 
 rule "Alternative history fork : In the present"
@@ -417,9 +417,9 @@ end
 
 rule "Recommend: In the present : No"
 	when
-		Pytanie(odpowiedz == "Station Eleven by Emily St. John Mandel")
+		Pytanie(trescPytania == "Too soon for a pandemic?", odpowiedz == "No")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"No" );
+		recommend( frame, kcontext.getKieRuntime(),"Station Eleven by Emily St. John Mandel" );
 end
 
 rule "In the present : Pandemic : Yes"
@@ -435,16 +435,16 @@ end
 
 rule "Recommend: In the present : On Fragile Waves"
 	when
-		Pytanie(odpowiedz == "On Fragile Waves by E. Lily Yu")
+		Pytanie(odpowiedz == "Escape political unrest")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"Escape political unrest" );
+		recommend( frame, kcontext.getKieRuntime(),"On Fragile Waves by E. Lily Yu" );
 end
 
 rule "Recommend: In the present : Riot Baby"
 	when
-		Pytanie(odpowiedz == "Riot Baby by Tochi Onyebuchi")
+		Pytanie(odpowiedz == "Start a revolution")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"Start a revolution" );
+		recommend( frame, kcontext.getKieRuntime(),"Riot Baby by Tochi Onyebuchi" );
 end
 
 rule "Alternative history fork : In the future"
@@ -460,16 +460,16 @@ end
 
 rule "Recommend: In the future : The Traitor Baru"
 	when
-		Pytanie(odpowiedz == "The Traitor Baru Cormorant (The Masquerade, #1) by Seth Dickinson")
+		Pytanie(odpowiedz == "Fighting imperialism")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"Fighting imperialism" );
+		recommend( frame, kcontext.getKieRuntime(),"The Traitor Baru Cormorant (The Masquerade, #1) by Seth Dickinson" );
 end
 
 rule "Recommend: In the future : American War"
 	when
-		Pytanie(odpowiedz == "American War by Omar El Akkad")
+		Pytanie(odpowiedz == "Climate change is our real foe" )
 	then
-		recommend( frame, kcontext.getKieRuntime(),"Climate change is our real foe" );
+		recommend( frame, kcontext.getKieRuntime(), "American War by Omar El Akkad");
 end
 
 function void recommend(JFrame frame, KieRuntime krt, String title) {
