@@ -19,7 +19,7 @@
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>1</factId>
-      <objectToString>Pytanie( trescPytania=Which type of book are you looking for?, odpowiedz=Fantasy )</objectToString>
+      <objectToString>Pytanie( trescPytania=Which type of book are you looking for?, odpowiedz=Sci-Fi )</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
@@ -30,76 +30,128 @@
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>Up for a fairy tale? [1]</activationId>
-      <rule>Up for a fairy tale?</rule>
+      <activationId>Sci-Fi fork [1]</activationId>
+      <rule>Sci-Fi fork</rule>
       <declarations></declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>Up for a fairy tale? [1]</activationId>
-      <rule>Up for a fairy tale?</rule>
+      <activationId>Sci-Fi fork [1]</activationId>
+      <rule>Sci-Fi fork</rule>
       <declarations></declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>2</factId>
-      <objectToString>Pytanie( trescPytania=Up for a fairy tale?, odpowiedz=Yes, why mess with a classic formula )</objectToString>
+      <objectToString>Pytanie( trescPytania=Want to travel to other planets?, odpowiedz=Yes. Other planets it is. )</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>Up for a fairy tale? [1]</activationId>
-      <rule>Up for a fairy tale?</rule>
+      <activationId>Sci-Fi fork [1]</activationId>
+      <rule>Sci-Fi fork</rule>
       <declarations></declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>Fairy Tale Fork : Yes [2]</activationId>
-      <rule>Fairy Tale Fork : Yes</rule>
+      <activationId>Sci-Fi: Other planets [2]</activationId>
+      <rule>Sci-Fi: Other planets</rule>
       <declarations></declarations>
       <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>Fairy Tale Fork : Yes [2]</activationId>
-      <rule>Fairy Tale Fork : Yes</rule>
+      <activationId>Sci-Fi: Other planets [2]</activationId>
+      <rule>Sci-Fi: Other planets</rule>
       <declarations></declarations>
       <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>3</factId>
-      <objectToString>Pytanie( trescPytania=Wybierz:, odpowiedz=A gritty, existential fable )</objectToString>
+      <objectToString>Pytanie( trescPytania=Yes. Other planets it is., odpowiedz=Let&apos;s start closer to home )</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>Fairy Tale Fork : Yes [2]</activationId>
-      <rule>Fairy Tale Fork : Yes</rule>
+      <activationId>Sci-Fi: Other planets [2]</activationId>
+      <rule>Sci-Fi: Other planets</rule>
       <declarations></declarations>
       <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>Recommend: The buried Giant [3]</activationId>
-      <rule>Recommend: The buried Giant</rule>
+      <activationId>Sci-Fi: Closer to home [3]</activationId>
+      <rule>Sci-Fi: Closer to home</rule>
       <declarations></declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>Recommend: The buried Giant [3]</activationId>
-      <rule>Recommend: The buried Giant</rule>
+      <activationId>Sci-Fi: Closer to home [3]</activationId>
+      <rule>Sci-Fi: Closer to home</rule>
+      <declarations></declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>4</factId>
+      <objectToString>Pytanie( trescPytania=Let&apos;s start closer to home, odpowiedz=Let the action come to us )</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Sci-Fi: Closer to home [3]</activationId>
+      <rule>Sci-Fi: Closer to home</rule>
       <declarations></declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
-      <type>7</type>
-      <activationId>Recommend: The buried Giant [3]</activationId>
-      <rule>Recommend: The buried Giant</rule>
+      <type>4</type>
+      <activationId>Sci-Fi: action come to us [4]</activationId>
+      <rule>Sci-Fi: action come to us</rule>
       <declarations></declarations>
-      <factHandleIds>3</factHandleIds>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Sci-Fi: action come to us [4]</activationId>
+      <rule>Sci-Fi: action come to us</rule>
+      <declarations></declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>5</factId>
+      <objectToString>Pytanie( trescPytania=Which do you prefer?, odpowiedz=First contact through a VR game )</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Sci-Fi: action come to us [4]</activationId>
+      <rule>Sci-Fi: action come to us</rule>
+      <declarations></declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Recommend: The Three-Body Problem [5]</activationId>
+      <rule>Recommend: The Three-Body Problem</rule>
+      <declarations></declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Recommend: The Three-Body Problem [5]</activationId>
+      <rule>Recommend: The Three-Body Problem</rule>
+      <declarations></declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Recommend: The Three-Body Problem [5]</activationId>
+      <rule>Recommend: The Three-Body Problem</rule>
+      <declarations></declarations>
+      <factHandleIds>5</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
   </events>
 </org.drools.core.audit.WorkingMemoryLog>

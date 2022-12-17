@@ -502,19 +502,10 @@ rule "Recommend: In the future : Exhalation"
 		recommend( frame, kcontext.getKieRuntime(),"Exhalation by Ted Chiang" );
 end
 
-rule "Sci-Fi: Focus on today"
-	when
-		Pytanie(trescPytania == "Today, or an ultra-modern future?", odpowiedz == "Focus on today")
-	then
-		ArrayList<String> odp = new ArrayList<String>();
-		odp.add("The ethics of cloning");
-		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"Focus on today", odp );
-		insert(p);
-end
 
 rule "Recommend: Focus on today : The Echo Wife"
 	when
-		Pytanie(odpowiedz == "The ethics of cloning")
+		Pytanie(trescPytania == "Today, or an ultra-modern future?", odpowiedz == "Focus on today")
 	then
 		recommend( frame, kcontext.getKieRuntime(),"The Echo Wife by Sarah Gailey" );
 end
@@ -577,7 +568,7 @@ rule "Recommend: This is How You Lose the Time"
 	when
 		Pytanie(odpowiedz == "To where time travel is weaponized")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"This Is How You Lose the Time War by Amal El-Mohtar and max Gladstone" );
+		recommend( frame, kcontext.getKieRuntime(),"This Is How You Lose the Time War by Amal El-Mohtar and Max Gladstone" );
 end
 
 rule "Sci-Fi: Other planets"
@@ -642,7 +633,7 @@ rule "Sci-Fi: And see where adventure leads"
 		ArrayList<String> odp = new ArrayList<String>();
 		odp.add("To science some $h1t");
 		odp.add("To find a new home");
-		odp.add("To explore strange new worlds seek out new life, and new civilizations");
+		odp.add("To explore strange new worlds, seek out new life, and new civilizations");
 		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"And see where adventure leads", odp );
 		insert(p);
 end
@@ -657,7 +648,7 @@ end
 
 rule "Recommend: The Long Way"
 	when
-		Pytanie(odpowiedz == "To explore strange new worlds seek out new life, and new civilizations")
+		Pytanie(odpowiedz == "To explore strange new worlds, seek out new life, and new civilizations")
 	then
 		recommend( frame, kcontext.getKieRuntime(),"The Long Way To A Small Angry Planet (Wayfarers, #1) by Becky Chambers" );
 end
@@ -703,7 +694,7 @@ rule "Sci-Fi: To explore"
 		Pytanie(trescPytania == "Let's go to another galaxy", odpowiedz == "To explore")
 	then
 		ArrayList<String> odp = new ArrayList<String>();
-		odp.add("With Ancient AIs");
+		odp.add("With sentient AIs");
 		odp.add("The nature of reality");
 		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"To explore", odp );
 		insert(p);
@@ -718,12 +709,12 @@ end
 
 rule "Sci-Fi: With Ancient AIs"
 	when
-		Pytanie(trescPytania == "To explore", odpowiedz == "With Ancient AIs")
+		Pytanie(trescPytania == "To explore", odpowiedz == "With sentient AIs")
 	then
 		ArrayList<String> odp = new ArrayList<String>();
 		odp.add("Addicted to TV shows");
 		odp.add("With a hive mind");
-		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"With Ancient AIs", odp );
+		Pytanie p = zapytaj( frame, kcontext.getKieRuntime(),"With sentient AIs", odp );
 		insert(p);
 end
 
@@ -731,7 +722,7 @@ rule "Recommend: All systems Red"
 	when
 		Pytanie(odpowiedz == "Addicted to TV shows")
 	then
-		recommend( frame, kcontext.getKieRuntime(),"All systems Red (The Murderbot Diaries, #1) by Martha Wells" );
+		recommend( frame, kcontext.getKieRuntime(),"All Systems Red (The Murderbot Diaries, #1) by Martha Wells" );
 end
 
 rule "Recommend: Ancillary Justice"
